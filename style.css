@@ -7,15 +7,22 @@
 :root {
   --bkg-color: #1d2630;
   --bkg-item-color: #293542;
-  --interior-item-color: #596b81;
-  --title-section-1: #53dcee;
+  --interior-text-color: #596b81;
+  --color-1: #53dcee;
+  --color-2: hsl(286, 82%, 63%);
+  --color-3: hsl(78, 82%, 63%);
+  --color-4: hsl(335, 82%, 63%);
+  --color-5: hsl(172, 82%, 63%);
+  --color-6: hsl(56, 82%, 63%);
+  --color-7: hsl(263, 82%, 63%);
+  --color-8: hsl(209, 82%, 63%);
 }
 
 body {
   background-color: var(--bkg-color);
+  color: #fff;
   font-family: "Noto Sans JP", sans-serif;
   font-weight: 400;
-  color: #fff;
   height: 100vh;
   margin: 0;
   /* display: flex;
@@ -41,9 +48,11 @@ a {
 .title-page span {
   font-size: 2rem;
   font-weight: 200;
+  position: relative;
+  top: 16px;
 }
 .container {
-  max-width: 1000px;
+  max-width: 1200px;
   width: 100%;
   margin: 2rem auto;
 }
@@ -55,7 +64,7 @@ a {
 }
 
 .title-section {
-  background-color: var(--title-section-1);
+  color: var(--bkg-color);
   border-radius: 5px;
   font-size: 2.3rem;
   font-weight: 300;
@@ -64,13 +73,33 @@ a {
   text-align: center;
   margin: 2rem 0;
   padding: 1rem 0;
-  color: var(--bkg-color);
+}
+
+.color-1 {
+  background-color: var(--color-1);
+}
+
+.color-2 {
+  background-color: var(--color-2);
+}
+.color-3 {
+  background-color: var(--color-3);
+}
+.color-4 {
+  background-color: var(--color-4);
+}
+.color-5 {
+  background-color: var(--color-5);
+}
+.color-6 {
+  background-color: var(--color-6);
 }
 
 .item {
   background-color: var(--bkg-item-color);
   border-radius: 5px;
-  padding: 1.5rem;
+  padding: 1.9rem;
+  cursor: pointer;
 }
 
 .item-link {
@@ -83,16 +112,29 @@ a {
 }
 
 .title-item {
-  font-size: 1.8rem;
-  border-bottom: 1px dotted var(--interior-item-color);
-  padding-bottom: 0.8rem;
   color: #fff;
-}
-
-.subtitle-item {
-  color: var(--interior-item-color);
-  font-weight: 400;
+  font-size: 1.8rem;
+  border-bottom: 1px dotted var(--interior-text-color);
+  padding-bottom: 0.8rem;
+  margin-top: 0.2rem;
 }
 
 /* .title-item:hover {
 } */
+
+.subtitle-item {
+  color: var(--interior-text-color);
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+.footer {
+  background-color: var(--bkg-item-color);
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1.2rem;
+  height: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}

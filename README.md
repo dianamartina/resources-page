@@ -1,1 +1,3 @@
 # resources-page
+
+Image resources
