@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --bkg-color: #1d2630;
   --bkg-item-color: #293542;
@@ -31,8 +35,10 @@ a {
   text-decoration: none;
 }
 
-ul {
+ul,
+ul li {
   list-style-type: none;
+  padding-left: 0;
 }
 
 .header {
@@ -62,35 +68,44 @@ ul {
   width: 3.5rem;
 }
 
-.button-menu {
+.menu-button,
+.nav {
   position: fixed;
   right: 0;
+  top: 0;
+  cursor: pointer;
+}
+
+.menu-button {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-right: 1rem;
 }
 
 .nav {
-  background-color: var(--bkg-color);
-  position: absolute;
-  top: 0;
-  right: calc(100% + 1rem);
-  padding: 1rem;
+  background-color: var(--bkg-item-color);
+  height: 100vh;
+  padding: 1rem 2rem;
+  transform: translateX(100%);
+  transition: all 1s ease;
+}
+
+.greater-less-sign {
+  font-size: 1.8rem;
 }
 
 .nav.active {
-  right: 1rem;
+  transform: translateX(0);
 }
 
-/* .menu {
-  display: flex;
-} */
-
 .menu-item {
-  padding-left: 10px;
-  border-bottom: transparent;
+  margin-bottom: 0.2rem;
 }
 
 .menu-item-link {
   color: #fff;
-  font-size: 1.07rem;
+  font-weight: 400;
 }
 
 .container {
@@ -98,6 +113,7 @@ ul {
   width: 100%;
   margin: 0 auto;
   padding: 0 1rem;
+  padding-right: 3.5rem;
 }
 
 .row {
@@ -117,19 +133,24 @@ ul {
   padding: 1rem 0;
 }
 
-.color-1 {
+.color-1,
+.hover-1:hover {
   color: var(--color-1);
 }
-.color-2 {
+.color-2,
+.hover-2:hover {
   color: var(--color-2);
 }
-.color-3 {
+.color-3,
+.hover-3:hover {
   color: var(--color-3);
 }
-.color-4 {
+.color-4,
+.hover-4:hover {
   color: var(--color-4);
 }
-.color-5 {
+.color-5,
+.hover-5:hover {
   color: var(--color-5);
 }
 
@@ -228,9 +249,24 @@ ul {
   }
   .container {
     max-width: 460px;
+    padding-right: 1rem;
   }
 
   .row {
     grid-template-columns: 1fr;
+  }
+
+  .menu-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bkg-color);
+    /* border: 1px solid red; */
+    border-radius: 50%;
+    width: 2.8rem;
+    height: 2.8rem;
+    top: 1rem;
+    right: 1rem;
+    padding: 0;
   }
 }
