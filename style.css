@@ -8,14 +8,11 @@
   --bkg-color: #1d2630;
   --bkg-item-color: #293542;
   --interior-text-color: #596b81;
-  --color-1: #53dcee;
-  --color-2: hsl(286, 82%, 63%);
-  --color-3: hsl(78, 82%, 63%);
-  --color-4: hsl(335, 82%, 63%);
-  --color-5: hsl(172, 82%, 63%);
-  --color-6: hsl(56, 82%, 63%);
-  --color-7: hsl(263, 82%, 63%);
-  --color-8: hsl(209, 82%, 63%);
+  --color-1: #7de8da;
+  --color-2: #ad7de8;
+  --color-3: #e8da7d;
+  --color-4: #7dd3e8;
+  --color-5: #e8977d;
 }
 
 body {
@@ -34,72 +31,134 @@ a {
   text-decoration: none;
 }
 
-.header {
-  margin-bottom: 5rem;
+ul {
+  list-style-type: none;
 }
 
-.title-page {
-  font-size: 2.6rem;
-  font-weight: 900;
+.header {
+  margin-bottom: 1rem;
+}
+
+.logo-text {
   letter-spacing: 1px;
   margin-top: 0;
+  display: inline-block;
+  padding-left: 10px;
+  padding: relative;
 }
 
-.title-page span {
-  font-size: 2rem;
+.logo-text-top {
+  font-size: 1.4rem;
   font-weight: 200;
-  position: relative;
-  top: 16px;
+  position: absolute;
+  top: 2rem;
 }
+
+.logo-text-bottom {
+  font-size: 1.6rem;
+  font-weight: 900;
+}
+.logo-img {
+  width: 3.5rem;
+}
+
+.button-menu {
+  position: fixed;
+  right: 0;
+}
+
+.nav {
+  background-color: var(--bkg-color);
+  position: absolute;
+  top: 0;
+  right: calc(100% + 1rem);
+  padding: 1rem;
+}
+
+.nav.active {
+  right: 1rem;
+}
+
+/* .menu {
+  display: flex;
+} */
+
+.menu-item {
+  padding-left: 10px;
+  border-bottom: transparent;
+}
+
+.menu-item-link {
+  color: #fff;
+  font-size: 1.07rem;
+}
+
 .container {
   max-width: 1200px;
   width: 100%;
-  margin: 2rem auto;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
 .row {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
+  gap: 1.3rem;
 }
 
 .title-section {
   color: var(--bkg-color);
   border-radius: 5px;
-  font-size: 2.3rem;
+  font-size: 1.5rem;
   font-weight: 300;
   letter-spacing: 1px;
-  margin-bottom: 7rem;
   text-align: center;
-  margin: 2rem 0;
+  margin: 1.3rem 0;
   padding: 1rem 0;
 }
 
 .color-1 {
-  background-color: var(--color-1);
+  color: var(--color-1);
 }
-
 .color-2 {
-  background-color: var(--color-2);
+  color: var(--color-2);
 }
 .color-3 {
-  background-color: var(--color-3);
+  color: var(--color-3);
 }
 .color-4 {
-  background-color: var(--color-4);
+  color: var(--color-4);
 }
 .color-5 {
-  background-color: var(--color-5);
+  color: var(--color-5);
 }
-.color-6 {
-  background-color: var(--color-6);
+
+.bkg-color-1 {
+  background-color: var(--color-1);
+}
+.bkg-color-2 {
+  background-color: var(--color-2);
+}
+.bkg-color-3 {
+  background-color: var(--color-3);
+}
+.bkg-color-4 {
+  background-color: var(--color-4);
+}
+.bkg-color-5 {
+  background-color: var(--color-5);
 }
 
 .item {
   background-color: var(--bkg-item-color);
   border-radius: 5px;
-  padding: 1.9rem;
+  padding: 1rem;
   cursor: pointer;
+  transition: all 0.5s;
+}
+
+.item:hover {
+  transform: scale(1.07);
 }
 
 .item-link {
@@ -107,34 +166,71 @@ a {
 }
 
 .item p {
-  font-size: 1.2rem;
-  line-height: 1.8;
+  line-height: 1.5;
+  margin-bottom: 0;
 }
 
 .title-item {
   color: #fff;
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   border-bottom: 1px dotted var(--interior-text-color);
-  padding-bottom: 0.8rem;
+  padding-bottom: 0.6rem;
   margin-top: 0.2rem;
+  margin-bottom: 0;
 }
 
-/* .title-item:hover {
-} */
-
 .subtitle-item {
-  color: var(--interior-text-color);
-  font-size: 1.3rem;
-  font-weight: 400;
+  font-size: 1.1rem;
+  font-weight: 300;
+  margin: 0.8rem 0;
 }
 
 .footer {
   background-color: var(--bkg-item-color);
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 1.2rem;
-  height: 8rem;
+  color: rgba(255, 255, 255, 0.555);
+  font-weight: 300;
+  font-size: 0.9rem;
+  height: 5rem;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  margin-top: 1.2rem;
+}
+
+@media only screen and (max-width: 900px) {
+  .container {
+    max-width: 900px;
+  }
+
+  .row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 14px;
+  }
+
+  .container {
+    max-width: 600px;
+  }
+
+  .row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  html {
+    font-size: 13px;
+  }
+  .container {
+    max-width: 460px;
+  }
+
+  .row {
+    grid-template-columns: 1fr;
+  }
 }
