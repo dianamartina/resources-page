@@ -187,6 +187,8 @@ ul li {
 }
 
 .item p {
+  font-size: 0.9rem;
+  font-weight: 300;
   line-height: 1.5;
   margin-bottom: 0;
 }
@@ -268,5 +270,9 @@ ul li {
     top: 1rem;
     right: 1rem;
     padding: 0;
+  }
+
+  .item p {
+    font-size: 0.96rem;
   }
 }
