@@ -41,8 +41,32 @@ ul li {
   padding-left: 0;
 }
 
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+  padding-right: 3.5rem;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.3rem;
+  margin-bottom: 5rem;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .header {
   margin-bottom: 1rem;
+}
+
+.logo {
+  margin-right: auto;
 }
 
 .logo-text {
@@ -63,9 +87,19 @@ ul li {
 .logo-text-bottom {
   font-size: 1.6rem;
   font-weight: 900;
+  letter-spacing: 0.3rem;
 }
+
 .logo-img {
   width: 3.5rem;
+}
+
+.logo-author {
+  align-self: center;
+}
+
+.logo-author img {
+  width: 16rem;
 }
 
 .menu-button,
@@ -106,20 +140,6 @@ ul li {
 .menu-item-link {
   color: #fff;
   font-weight: 400;
-}
-
-.container {
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 1rem;
-  padding-right: 3.5rem;
-}
-
-.row {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.3rem;
 }
 
 .title-section {
@@ -221,41 +241,15 @@ ul li {
   margin-top: 1.2rem;
 }
 
-@media only screen and (max-width: 900px) {
-  .container {
-    max-width: 900px;
-  }
-
-  .row {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
 @media only screen and (max-width: 600px) {
   html {
     font-size: 14px;
-  }
-
-  .container {
-    max-width: 600px;
-  }
-
-  .row {
-    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media only screen and (max-width: 460px) {
   html {
     font-size: 13px;
-  }
-  .container {
-    max-width: 460px;
-    padding-right: 1rem;
-  }
-
-  .row {
-    grid-template-columns: 1fr;
   }
 
   .menu-button {
