@@ -111,11 +111,12 @@ ul li {
   cursor: pointer;
 }
 
+/* Menu button position */
 .menu-button {
   height: 100vh;
   display: flex;
   align-items: center;
-  padding-right: 1rem;
+  padding-right: 0.6rem;
 }
 
 .nav {
@@ -127,8 +128,19 @@ ul li {
   z-index: 10;
 }
 
+/* Menu button shape */
 .greater-less-sign {
   font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.8rem;
+  background-color: var(--bkg-item-color);
+  height: 2.5rem;
+  width: 2.5rem;
+  padding-bottom: 1px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .nav.active {
@@ -219,8 +231,8 @@ ul li {
 .item-icon {
   position: absolute;
   top: 0.8rem;
-  right: 1.5rem;
-  height: 2.5rem;
+  right: 1rem;
+  height: 2.3rem;
 }
 
 .title-item {
@@ -261,20 +273,6 @@ ul li {
 @media only screen and (max-width: 460px) {
   html {
     font-size: 13px;
-  }
-
-  .menu-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--bkg-color);
-    /* border: 1px solid red; */
-    border-radius: 50%;
-    width: 3rem;
-    height: 3rem;
-    top: 1rem;
-    right: 1rem;
-    padding: 0;
   }
 
   .item p {
