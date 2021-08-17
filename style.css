@@ -16,7 +16,8 @@ html {
   --color-2: #ad7de8;
   --color-3: #e8da7d;
   --color-4: #7dd3e8;
-  --color-5: #e8977d;
+  --color-5: #e777cb;
+  /* --color-5: #e8977d; */
 }
 
 body {
@@ -118,11 +119,12 @@ ul li {
 }
 
 .nav {
-  background-color: var(--bkg-item-color);
+  background-color: var(--bkg-color);
   height: 100vh;
   padding: 1rem 2rem;
   transform: translateX(100%);
   transition: all 0.7s ease;
+  z-index: 10;
 }
 
 .greater-less-sign {
@@ -146,8 +148,8 @@ ul li {
   color: var(--bkg-color);
   border-radius: 5px;
   font-size: 1.5rem;
-  font-weight: 300;
-  letter-spacing: 1px;
+  font-weight: 500;
+  letter-spacing: 8px;
   text-align: center;
   margin: 1.3rem 0;
   padding: 1rem 0;
@@ -196,6 +198,7 @@ ul li {
   padding: 1rem;
   cursor: pointer;
   transition: all 0.5s;
+  position: relative;
 }
 
 .item:hover {
@@ -213,11 +216,19 @@ ul li {
   margin-bottom: 0;
 }
 
+.item-icon {
+  position: absolute;
+  top: 0.8rem;
+  right: 1.5rem;
+  height: 2.5rem;
+}
+
 .title-item {
   color: #fff;
   font-size: 1.4rem;
   border-bottom: 1px dotted var(--interior-text-color);
   padding-bottom: 0.6rem;
+  letter-spacing: 2px;
   margin-top: 0.2rem;
   margin-bottom: 0;
 }
